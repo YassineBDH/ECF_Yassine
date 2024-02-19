@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+body {
+    font-family: 'joti One';
+}
+
+ul {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    width: 100wh;
+    height: 7vh;
+    display: flex;
+    justify-content: left;
+    background-color: blue;
+}
+
+nav a {
+    position: relative;
+    font-family: 'joti One';
+    color: antiquewhite;
+    /* background-color: brown; */
+    font-size: 20px;
+    transition: 0.3s;
+    margin: 10px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navA:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 2px;
+    background-color: rgb(218, 191, 191);
+    bottom: -1px;
+    width: 0%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+a:hover {
+    color: rgb(218, 191, 191);
+}
+
+a:hover::before {
+    width: 100%;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.container div {
+    width: calc(25% - 5px);
+    margin-bottom: 5px;
+}
+
+.container a,
+.container h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+a:hover::before {
+    width: 100%;
+}
+
+.logoLol {
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.container img:hover {
+
+    transform: scale(1.4);
+
+}
+
+img {
+    width: 127px;
+    height: 127px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    border-radius: .8rem;
+    color: aliceblue;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.closex {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+
+    nav {
+        height: auto; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+    nav a {
+        margin: 5px;
+        
+    }
+    h1 {
+        font-size: 24px;
+    }
+
+    ul {
+        display: block;
+    }
+
+    img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .container a,
+    .container h3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+        margin: 10px;
+
+    }
+    .container{
+        margin-top: 20px;
+    }
+
+    .footer-text {
+        font-size: 0.8rem;
+    }
+
+    .container img:hover {
+
+        transform: scale(1.1);
+
+    }
+
+    .sidenav {
+        height: 30%;
+        width: 150px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: -150px;
+        background-color: #e8e8e8;
+        padding-top: 60px;
+        transition: left 0.5s ease;
+    }
+
+    /* Sidenav menu links */
+    .sidenav a {
+        padding: 8px 8px 8px 20px;
+        text-decoration: none;
+        font-size: 15px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: white;
+    }
+
+    .sidenav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Active class */
+    .sidenav.active {
+        left: 0;
+    }
+
+    /* Close btn */
+    .sidenav .closex {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+    }
+
+    /* Icône burger */
+    .burger-icon span {
+        display: block;
+        width: 35px;
+        height: 5px;
+        background-color: blue;
+        margin: 6px 0;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    nav {
+        height: auto; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+    nav a {
+        margin: 5px;
+        
+    }
+    h1 {
+        font-size: 24px;
+    }
+
+    ul {
+        display: block;
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .container a,
+    .container h3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+        margin: 10px;
+
+    }
+    .container{
+        margin-top: 50px;
+    }
+
+    .footer-text {
+        font-size: 0.8rem;
+    }
+
+    .container img:hover {
+
+        transform: scale(1.2);
+
+    }
+
+    .sidenav {
+        height: 30%;
+        width: 150px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: -150px;
+        background-color: #e8e8e8;
+        padding-top: 60px;
+        transition: left 0.5s ease;
+    }
+
+    /* Sidenav menu links */
+    .sidenav a {
+        padding: 8px 8px 8px 20px;
+        text-decoration: none;
+        font-size: 15px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: white;
+    }
+
+    .sidenav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Active class */
+    .sidenav.active {
+        left: 0;
+    }
+
+    /* Close btn */
+    .sidenav .closex {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+    }
+
+    /* Icône burger */
+    .burger-icon span {
+        display: block;
+        width: 35px;
+        height: 5px;
+        background-color: blue;
+        margin: 6px 0;
+    }
+
+}

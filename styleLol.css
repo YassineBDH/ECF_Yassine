@@ -1,0 +1,516 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+
+body {
+    font-family: 'joti One';
+    width: 100vw;
+    height: 100vh;
+}
+
+/* ul {
+    display: flex;
+    align-items: center;
+} */
+
+nav {
+    width: 100wh;
+    height: auto;
+    display: flex;
+    justify-content: left;
+    background-color: blue;
+}
+
+nav a {
+    position: relative;
+    font-family: 'joti One';
+    color: antiquewhite;
+    /* background-color: brown; */
+    font-size: 20px;
+    transition: 0.3s;
+    margin: 10px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 2px;
+    background-color: rgb(218, 191, 191);
+    bottom: -1px;
+    width: 0%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+a:hover {
+    color: rgb(218, 191, 191);
+}
+
+a:hover::before {
+    width: 100%;
+}
+
+h1 {
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.global {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.Logo_main {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Logo_main p {
+    width: 60%;
+    margin: auto;
+}
+
+.margin_left {
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.grp {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+.grp div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.titre,
+.logoTitre {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.grp img,
+.grp p {
+    width: 120px;
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-bottom: 10px;
+}
+
+.grp img:hover {
+    transform: scale(1.1);
+}
+
+.modal_photo,
+.modal_photo1,
+.modal_photo2 {
+    width: 100%;
+    height: 100%;
+}
+
+/* ul{
+    display: flex;
+    align-items: center;
+} */
+
+.modal,
+.modal1,
+.modal2 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+
+    background-color: rgb(0, 0, 0);
+
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+
+.modal-content,
+.modal-content1,
+.modal-content2 {
+    background-color: black;
+    margin: 1px auto;
+
+    padding: 2%;
+    border: 2px solid #888;
+    width: 35%;
+    height: 95vh;
+}
+
+
+.close,
+.close1,
+.close2 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus,
+.close1:hover,
+.close1:focus,
+.close2:hover,
+.close2:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#myBtn,
+#myBtn1,
+#myBtn2 {
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    background-color: blue;
+    justify-content: center;
+    /* justify-items: flex-end; */
+    border-radius: .8rem;
+    color: aliceblue;
+    position: absolute;
+    width: 100%;
+    /* left: 5%; */
+    bottom: 0;
+}
+
+.closex {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    nav a {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    /* ul{
+    display: block;
+} */
+    h1 {
+        font-size: 2rem;
+    }
+
+    .modal-content,
+    .modal-content1,
+    .modal-content2 {
+
+        width: 60%;
+    }
+
+    .modal_photo,
+    .modal_photo1,
+    .modal_photo2 {
+        width: 80%;
+    }
+
+    .margin_left {
+        /* display: contents; */
+        font-size: 0.8rem;
+        margin-top: 20px;
+        margin-left: 15px;
+    }
+
+    .Logo_main img {
+        width: 160px;
+    }
+
+    /* img{
+        width: 20px;
+        height: 20px;
+    } */
+    .grp div img {
+        width: 35px;
+        height: 35px;
+        object-fit: cover;
+        cursor: pointer;
+        transition: transform 0.3s;
+        margin-bottom: 10px;
+    }
+
+    .grp div p {
+        font-size: 0.8rem;
+        width: 11px;
+        height: 35px;
+    }
+
+    #myBtn,
+    #myBtn1,
+    #myBtn2 {
+        width: 60px;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .Logo_main p {
+        width: 100%;
+        max-width: 100%;
+        font-size: 1rem;
+        margin-left: -33px;
+        margin-top: 120px;
+    }
+
+    .grp {
+        margin-left: 7px;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .footer-text {
+        font-size: 0.8rem;
+    }
+
+    .presentation p {
+
+        font-size: 1rem;
+
+    }
+
+    .golbal .grp p {
+        font-size: 1.2rem;
+    }
+
+    .sidenav {
+        height: 30%;
+        width: 150px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: -150px;
+        background-color: #e8e8e8;
+        padding-top: 30px;
+        transition: left 0.5s ease;
+    }
+
+    /* Sidenav menu links */
+    .sidenav a {
+        padding: 8px 8px 8px 0%;
+        text-decoration: none;
+        font-size: 15px;
+        color: #fff;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: white;
+    }
+
+    .sidenav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Active class */
+    .sidenav.active {
+        left: 0;
+    }
+
+    /* Close btn */
+    .sidenav .close {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+    }
+
+    /* Icône burger */
+    .burger-icon span {
+        display: block;
+        width: 35px;
+        height: 5px;
+        background-color: blue;
+        margin: 6px 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    nav a {
+        height: auto;
+        /* flex-direction: column; 
+        align-items: center;  */
+        font-size: 14px;
+    }
+
+    /* ul{
+    display: block;
+} */
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .modal-content,
+    .modal-content1,
+    .modal-content2 {
+
+        width: 85%;
+    }
+
+    .margin_left {
+        /* display: contents; */
+        font-size: 0.8rem;
+        margin-top: 20px;
+        margin-left: 15px;
+    }
+
+    .Logo_main img {
+        width: 100px;
+    }
+
+    /* img{
+        width: 20px;
+        height: 20px;
+    } */
+    /* .grp div img {
+        width: 35px;
+        height: 35px;
+        object-fit: cover;
+        cursor: pointer;
+        transition: transform 0.3s;
+        margin-bottom: 10px;
+    } */
+
+    .grp div p {
+        font-size: 0.6rem;
+        width: 35px;
+        height: 35px;
+    }
+
+    #myBtn,
+    #myBtn1,
+    #myBtn2 {
+        width: 65px;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .Logo_main p {
+        width: 100%;
+        max-width: 100%;
+        font-size: 0.7rem;
+        margin-left: -20px;
+        margin-top: 150px;
+    }
+
+    .grp {
+        margin-left: 7px;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .footer-text {
+        font-size: 0.8rem;
+    }
+
+    .presentation p {
+
+        font-size: 1rem;
+
+    }
+
+    .golbal .grp p {
+        font-size: 0.8rem;
+    }
+
+    .sidenav {
+        height: 30%;
+        width: 150px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: -150px;
+        background-color: #e8e8e8;
+        padding-top: 60px;
+        transition: left 0.5s ease;
+    }
+
+    /* Sidenav menu links */
+    .sidenav a {
+        padding: 8px 8px 8px 20px;
+        text-decoration: none;
+        font-size: 15px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: white;
+    }
+
+    .sidenav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Active class */
+    .sidenav.active {
+        left: 0;
+    }
+
+    /* Close btn */
+    .sidenav .close {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+    }
+
+    /* Icône burger */
+    .burger-icon span {
+        display: block;
+        width: 35px;
+        height: 5px;
+        background-color: blue;
+        margin: 6px 0;
+    }
+}
